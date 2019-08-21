@@ -7,8 +7,15 @@ This rule warns/prevents users from using ES6 Maps incorrectly with immer. When 
 Examples of **incorrect** code for this rule:
 
 ```js
+// .set()
 draft.objectProp.set(key, newValue)
 draft.exampleFunction().secondFunction(1, 2).fakeArray[arrayIdx].objectProp.set(key, newValue);
+// .delete()
+draft.objectProp.delete(key)
+draft.exampleFunction().secondFunction(1, 2).fakeArray[arrayIdx].objectProp.delete(key);
+// .clear()
+draft.objectProp.clear()
+draft.exampleFunction().secondFunction(1, 2).fakeArray[arrayIdx].objectProp.clear();
 ```
 
 Examples of **correct** code for this rule:

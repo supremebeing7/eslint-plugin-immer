@@ -40,6 +40,26 @@ ruleTester.run("no-update-map", rule, {
           type: "MemberExpression"
         }
       ]
+    },
+    {
+      code:
+        "draft.exampleFunction().secondFunction(1, 2).fakeArray[arrayIdx].objectProp.delete(key);",
+      errors: [
+        {
+          message: rule.ERROR_MESSAGE,
+          type: "MemberExpression"
+        }
+      ]
+    },
+    {
+      code:
+        "draft.exampleFunction().secondFunction(1, 2).fakeArray[arrayIdx].objectProp.clear();",
+      errors: [
+        {
+          message: rule.ERROR_MESSAGE,
+          type: "MemberExpression"
+        }
+      ]
     }
   ]
 });
