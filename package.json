@@ -2,6 +2,7 @@
   "name": "eslint-plugin-immer",
   "version": "0.0.1",
   "description": "immer-specific eslint rules",
+  "repository": "github:supremebeing7/eslint-plugin-immer",
   "keywords": [
     "eslint",
     "eslintplugin",
